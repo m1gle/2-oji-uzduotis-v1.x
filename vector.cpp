@@ -166,9 +166,15 @@ sarasas[size].egz=rand()%10+1;
 cout<<"Sugeneruotas egzamino pazymys: "<<sarasas[size].egz<<endl;
 }
 }
-
-cout<<"Prideti mokini? (y/n) ";
-cin>>ats;
+do {
+    cout<<"Prideti mokini? (y/n) ";
+    cin>>ats;
+    error=false;
+    if(ats!="Y" and ats!="y" and ats!="n" and ats!="N"){
+        error = true;
+        cout<<"Klaida! Netinkamas ivedimas. "<<endl;
+    }
+}while(error);
 if(ats=="n" or ats=="n") repeat=false;
 if(ats=="y" or ats=="Y") sarasas.push_back(Studentas());
 size++;
