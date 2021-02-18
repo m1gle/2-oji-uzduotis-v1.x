@@ -32,9 +32,9 @@ Programa sukurta dviem būdais:
 
 Įdiegimo instrukcija:  
 Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą aplanką atlikti:\
-Paleidžiant užduotį su C masyvu:\
+- Paleidžiant užduotį su C masyvu:\
 g++ array.cpp -o array\
 ./array\
-Paleidžiant užduotį su std::vector:\
+- Paleidžiant užduotį su std::vector:\
 g++ vector.cpp -o vector\
 ./vector
