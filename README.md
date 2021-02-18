@@ -1,5 +1,4 @@
-# 2-oji-uzduotis
-# Vidurkio arba medianos skaičiavimas
+# 2-oji-uzduotis Vidurkio arba medianos skaičiavimas
 
 Programa suskaičiuoja studento vidurkį arba medianą.
 
@@ -31,7 +30,7 @@ Programa sukurta dviem būdais:
 1) naudojant C masyvą ("array.cpp")
 2) naudojant std::vector ("vector")
 
-Įdiegimo instrukcija:
+Įdiegimo instrukcija:  
 Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą aplanką atlikti:  
 Paleidžiant užduotį su C masyvu: 
 g++ array.cpp -o array 
