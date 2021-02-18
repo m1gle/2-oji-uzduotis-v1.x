@@ -31,10 +31,10 @@ Programa sukurta dviem būdais:
 2) naudojant std::vector ("vector")
 
 Įdiegimo instrukcija:  
-Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą aplanką atlikti:\
+Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą aplanką atlikti:
 - Paleidžiant užduotį su C masyvu:\
 g++ array.cpp -o array\
-./array\
+./array
 - Paleidžiant užduotį su std::vector:\
 g++ vector.cpp -o vector\
 ./vector
