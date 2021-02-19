@@ -4,9 +4,10 @@
 #include <iostream>
 #include <iomanip>
 #include <math.h>
-#include <stdio.h>
 #include <string>
+#include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <vector>
 #include <limits>
 #include <iterator>
