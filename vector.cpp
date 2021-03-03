@@ -3,27 +3,17 @@
 struct Studentas {
 string vardas, pavarde;
 vector<int> nd;
-double egz, galutinis;
+double egz, galutinis,med,vid;
 };
 
-double vidurkis (int kiek, vector<int> a) {
-double v;
-double sum=0;
- for(int i=0;i<kiek;i++){
-    sum=sum+a[i];
- }
- v=sum*1.00/kiek;
-return v;
-}
+void vedimasRanka (vector<Studentas> &sarasas,int &size) {
 
-int main(){
-vector<Studentas> sarasas;
 int kiek,pazymiai,x;
 string ats;
 bool error,repeat;
 string input;
 srand (time(NULL));
-int size=0;
+size=0;
 sarasas.push_back(Studentas());
 
 do{
@@ -180,44 +170,111 @@ if(ats=="y" or ats=="Y") sarasas.push_back(Studentas());
 size++;
 }while (repeat);
 
+}
+
+void skaitymas (vector<Studentas> &sarasas, int &size) {
+size=0;
+string eil;
+std::ifstream inf ("kursiokai.txt");
+getline(inf,eil);
+while (inf){
+if(!inf.eof()){
+sarasas.push_back(Studentas());
+inf>>sarasas[size].vardas>>sarasas[size].pavarde;
+for(int j=0;j<15;j++) {
+sarasas[size].nd.push_back(int());
+inf>>sarasas[size].nd[j];
+}
+inf>>sarasas[size].egz;
+size++;
+inf.ignore();
+}
+else break;
+}
+inf.close();
+}
+
+void rikiavimas (vector<Studentas> &sarasas, int size){
+for(int i=0;i<size-1;i++){
+for(int j=i+1;j<size;j++){
+if(sarasas[j].pavarde<sarasas[i].pavarde){
+std::swap(sarasas[i],sarasas[j]);
+}}}
+}
+
+double vidurkis (int kiek, vector<int> a) {
+double v;
+double sum=0;
+ for(int i=0;i<kiek;i++){
+    sum=sum+a[i];
+ }
+ v=sum*1.00/kiek;
+return v;
+}
+
+double vidurkisGalutinis (vector<Studentas> &sarasas, int size){
+   for(int i=0;i<sarasas.size();i++){
+      if(sarasas[i].nd.size()==0) sarasas[i].vid=0.6*sarasas[i].egz;
+      else sarasas[i].vid=0.4*vidurkis((sarasas[i].nd.size()),sarasas[i].nd)+0.6*sarasas[i].egz;
+    } 
+}
+
+double medianaGalutinis (vector<Studentas> &sarasas, int size) {
+     for(int i=0;i<sarasas.size();i++){
+    sort(sarasas[i].nd.begin(),sarasas[i].nd.end());
+    if(sarasas[i].nd.size()%2==0 and sarasas[i].nd.size()!=0) {
+       sarasas[i].med=((sarasas[i].nd[(sarasas[i].nd.size())/2]+sarasas[i].nd[(sarasas[i].nd.size())/2-1])*1.00/2)*0.4+sarasas[i].egz*0.6;
+    }
+    else if (sarasas[i].nd.size()%2!=0 and sarasas[i].nd.size()!=0) sarasas[i].med=(sarasas[i].nd[(sarasas[i].nd.size())/2])*0.4+sarasas[i].egz*0.6;
+    if(sarasas[i].nd.size()==0) sarasas[i].med=0.6*sarasas[i].egz;
+    }
+}
+
+int main(){
+vector<Studentas> sarasas;
+int kiek,pazymiai,x,size;
+string ats;
+bool error,repeat;
+string input;
+
 do {
-    cout<<"Ar norite suskaiciuoti mediana? (y/n): ";
+    cout<<"Skaityti faila (y) ar ivesti ranka (n) ?: ";
     cin>>ats;
     error=false;
     if(ats!="Y" and ats!="y" and ats!="n" and ats!="N"){
         error = true;
         cout<<"Klaida! Netinkamas ivedimas. "<<endl;
     }
+cin.clear();
+cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }while(error);
-
 cout<<endl;
-if(ats=="y" or ats=="Y"){         //Randa medianą
- for(int i=0;i<sarasas.size();i++){
-    sort(sarasas[i].nd.begin(),sarasas[i].nd.end());
-    if(sarasas[i].nd.size()%2==0 and sarasas[i].nd.size()!=0) {
-       sarasas[i].galutinis=((sarasas[i].nd[(sarasas[i].nd.size())/2]+sarasas[i].nd[(sarasas[i].nd.size())/2-1])*1.00/2)*0.4+sarasas[i].egz*0.6;
-    }
-    else if (sarasas[i].nd.size()%2!=0 and sarasas[i].nd.size()!=0) sarasas[i].galutinis=(sarasas[i].nd[(sarasas[i].nd.size())/2])*0.4+sarasas[i].egz*0.6;
-    if(sarasas[i].nd.size()==0) sarasas[i].galutinis=0.6*sarasas[i].egz;
-    }
-    cout<<"Pavarde        "<<"Vardas         "<<"Galutinis (Med.)"<<endl;
-}
-if(ats=="n" or ats=="N"){       //Suskaičiuoja vidurkį
-    for(int i=0;i<sarasas.size();i++){
-      if(sarasas[i].nd.size()==0) sarasas[i].galutinis=0.6*sarasas[i].egz;
-      else sarasas[i].galutinis=0.4*vidurkis((sarasas[i].nd.size()),sarasas[i].nd)+0.6*sarasas[i].egz;
-    }
-    cout<<"Pavarde        "<<"Vardas         "<<"Galutinis (Vid.)"<<endl;
+
+if(ats=="y" or ats=="Y"){
+skaitymas(sarasas,size);
 }
 
+if(ats=="n" or ats=="N"){  
+vedimasRanka(sarasas,size);
+}      
+ //Randa medianą
+medianaGalutinis(sarasas,size);
+vidurkisGalutinis(sarasas,size);
+rikiavimas(sarasas,size);
 //Spausdinimas
-cout<<"-----------------------------------------------"<<endl;
+cout<<"Pavarde        "<<"Vardas         "<<"Galutinis (Vid.) | Galutinis (Med.)"<<endl;
+cout<<"---------------------------------------------------------------------"<<endl;
 for(int i=0;i<sarasas.size();i++){
 cout<<sarasas[i].pavarde;
 for(int j=0;j<15-(sarasas[i].pavarde.size());j++)cout<<" ";
 cout<<sarasas[i].vardas;
 for(int j=0;j<15-(sarasas[i].vardas.size());j++)cout<<" ";
-cout<<setprecision(3)<<sarasas[i].galutinis<<endl;
+cout<<setprecision(3)<<sarasas[i].vid;
+for(int j=0;j<15;j++)cout<<" ";
+cout<<setprecision(3)<<sarasas[i].med<<endl;
 }
+
+sarasas.erase (sarasas.begin(),sarasas.begin()+size);
+
 return 0;
 }
