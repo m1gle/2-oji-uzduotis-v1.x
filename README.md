@@ -6,7 +6,8 @@ Programos veikimas:
 Su v0.1:
 - įvesti vardą ir pavardę
 - įvesti arba sugeneruoti namų darbų pažymius bei egzamino balą
-- suskaičiuoja suvestų pažymių vidurkį arba medianą
+- suskaičiuoja suvestų pažymių vidurkį arba mediana\
+
 Su v0.2:
 - pasirinkti nuskaityti arba įvesti duomenis pačiam
 - nuskaityti duomenis iš failo
