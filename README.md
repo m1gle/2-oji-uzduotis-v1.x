@@ -1,4 +1,4 @@
-# [2-oji-užduotis v0.1] Vidurkio arba medianos skaičiavimas
+# [2-oji-užduotis v0.1]
 
 Programa suskaičiuoja studento vidurkį arba medianą.
 
