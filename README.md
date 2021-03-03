@@ -2,7 +2,7 @@
 
 Programa suskaičiuoja studento vidurkį arba medianą.
 
-Programos veikimas:
+Programos veikimas:\
 Su v0.1:
 - įvesti vardą ir pavardę
 - įvesti arba sugeneruoti namų darbų pažymius bei egzamino balą
