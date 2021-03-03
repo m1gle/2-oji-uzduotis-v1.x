@@ -4,14 +4,15 @@
 #include <iostream>
 #include <iomanip>
 #include <math.h>
-#include <string>
 #include <stdio.h>
+#include <string>
 #include <stdlib.h>
 #include <time.h>
 #include <vector>
 #include <limits>
 #include <iterator>
-#include <bits/stdc++.h> 
+#include <fstream>
+#include <algorithm>
 
 using std::cin;
 using std::cout;
