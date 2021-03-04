@@ -16,7 +16,7 @@ Su v0.2:
 
 Su v0.3
 - funkcijos perkeltos į naują "function.cpp" failą
-- sukurtas išimpčių valdymas, kuris tikrina ar nuskaitomi tesingi failai bei ar skaitomas failas egzistuoja
+- sukurtas išimpčių valdymas, kuris tikrina ar nuskaitomi tesingi pažymiai bei ar skaitomas failas egzistuoja
 
 Skaitomas failas ("kursiokai.txt"):
 ```
