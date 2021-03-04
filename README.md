@@ -1,4 +1,4 @@
-# [2-oji-užduotis v0.2]
+# [2-oji-užduotis v0.3]
 
 Programa suskaičiuoja studento vidurkį arba medianą.
 
@@ -13,6 +13,10 @@ Su v0.2:
 - nuskaityti duomenis iš failo
 - duomenys yra suruošiuojami pagal pavardes
 - vidurkis ir mediana apvalinami iki sviekosios dalies
+
+Su v0.3
+- funkcijos perkeltos į naują "function.cpp" failą
+- sukurtas išimpčių valdymas, kuris tikrina ar nuskaitomi tesingi failai bei ar skaitomas failas egzistuoja
 
 Skaitomas failas ("kursiokai.txt"):
 ```
@@ -45,10 +49,20 @@ Saulenas       Saulius        4               3
 Zygiokas       Zygis          7               7
 ```
 
+Jeigu neranda skaitymo failo gaunama žinutė:
+```
+Nerastas failas!
+```
+Blogas pažymio ir egzamino įvedimas faile išmeta:
+```
+Netinkamas namu darbu pazymis skaitymo failel! Pazymis turi buti >=0 && <=10!
+Netinkamas egzamino pazymis skaitymo failel! Pazymis turi buti >=0 && <=10!
+```
 Programa sukurta naudojant std::vector ("vector")
 
 Įdiegimo instrukcija:  
 Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą aplanką atlikti:
 - Paleidžiant užduotį su std::vector:\
-g++ vector.cpp -o vector\
+g++ -c function.cpp\
+g++ -o vector vector.cpp function.o\
 ./vector
