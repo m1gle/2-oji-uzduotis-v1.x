@@ -269,9 +269,9 @@ cout<<sarasas[i].pavarde;
 for(int j=0;j<15-(sarasas[i].pavarde.size());j++)cout<<" ";
 cout<<sarasas[i].vardas;
 for(int j=0;j<15-(sarasas[i].vardas.size());j++)cout<<" ";
-cout<<setprecision(3)<<sarasas[i].vid;
+cout<<round(sarasas[i].vid);
 for(int j=0;j<15;j++)cout<<" ";
-cout<<setprecision(3)<<sarasas[i].med<<endl;
+cout<<round(sarasas[i].med)<<endl;
 }
 
 sarasas.erase (sarasas.begin(),sarasas.begin()+size);
