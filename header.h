@@ -1,5 +1,5 @@
-#ifndef HEADER_H_INCLUDED
-#define HEADER_H_INCLUDED
+#ifndef HEADER_H
+#define HEADER_H
 
 #include <iostream>
 #include <iomanip>
@@ -22,5 +22,19 @@ using std::setprecision;
 using std::vector;
 using std::string;
 
+struct Studentas {
+string vardas, pavarde;
+vector<int> nd;
+double egz, galutinis,med,vid;
+};
 
-#endif // HEADER_H_INCLUDED
+void vedimasRanka (vector<Studentas> &sarasas,int &size);
+void skaitymas (vector<Studentas> &sarasas, int &size);
+void rikiavimas (vector<Studentas> &sarasas, int size);
+double vidurkis (int kiek, vector<int> a);
+double vidurkisGalutinis (vector<Studentas> &sarasas, int size);
+double medianaGalutinis (vector<Studentas> &sarasas, int size);
+double spausdinimas (vector<Studentas> sarasas, int size);
+
+
+#endif 
