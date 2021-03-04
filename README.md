@@ -12,6 +12,7 @@ Su v0.2:
 - pasirinkti nuskaityti arba įvesti duomenis pačiam
 - nuskaityti duomenis iš failo
 - duomenys yra suruošiuojami pagal pavardes
+- vidurkis ir mediana apvalinami iki sviekosios dalies
 
 Skaitomas failas ("kursiokai.txt"):
 ```
