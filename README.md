@@ -35,14 +35,14 @@ Atspausdinimo rezultatas:
 ```
 Pavarde        Vardas         Galutinis (Vid.) | Galutinis (Med.)
 ---------------------------------------------------------------------
-Aldoniene      Aldona         3.19               3.4
-Antanaitis     Antanas        5.59               5.8
-Broniene       Brone          6.15               6.2
-Doviliene      Dovile         7.83               8.2
-Dovydenas      Dovydas        2.89               3
-Povilaitis     Povilas        3.88               3.8
-Saulenas       Saulius        3.65               3.2
-Zygiokas       Zygis          7.29               7.4
+Aldoniene      Aldona         3               3
+Antanaitis     Antanas        6               6
+Broniene       Brone          6               6
+Doviliene      Dovile         8               8
+Dovydenas      Dovydas        3               3
+Povilaitis     Povilas        4               4
+Saulenas       Saulius        4               3
+Zygiokas       Zygis          7               7
 ```
 
 Programa sukurta naudojant std::vector ("vector")
