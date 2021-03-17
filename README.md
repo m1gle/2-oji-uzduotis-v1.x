@@ -29,7 +29,7 @@ Su v0.4
 **Norint keisti kuriamo failo dydį, 'header.h' reikia pakeisti konstantą N.**
 
 Pavyzdys:\
-```const int N = 10;```
+```const int N = 10;```\
 Programa paleidžiama.\
 Sukuriamas failas failas ("stud10.txt"):
 ```
