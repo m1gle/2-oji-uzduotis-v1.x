@@ -1,203 +1,87 @@
 #include "header.h"
 
-void vedimasRanka (vector<Studentas> &sarasas,int &size) {
-
-int kiek,pazymiai,x;
-string ats;
-bool error,repeat;
-string input;
+void kurimas (){
+int x;
 srand (time(NULL));
-size=0;
-sarasas.push_back(Studentas());
-
-do{
-repeat=true;
-cout<<"Iveskite studento varda: ";
-cin>>sarasas[size].vardas;
-cout<<"Iveskite studento pavarde: ";
-cin>>sarasas[size].pavarde;
-   do {
-  cout<<"Ar zinomas namu darbu kiekis (y/n): ";
-cin>>ats;
- error=false;
- if(ats!="Y" && ats!="y" && ats!="n" && ats!="N"){
-    error = true;
-     cout<<"Klaida! Netinkamas ivedimas. "<<endl;
-}
-cin.clear();
-cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-}while(error);
-
-if(ats=="y" || ats=="Y"){    //Jeigu žinomas studento pažymių kiekis
-    do {
-    cout<<"Iveskite namu darbu kieki: ";
-    cin>>pazymiai;
-    error=false;
-    if(cin.fail()){
-        error = true;
-        cout<<"Klaida! Netinkamas ivedimas. "<<endl;
+string temp;
+std::ofstream ofs ("stud" + std::to_string(N) + ".txt");
+auto start = std::chrono::high_resolution_clock::now(); auto st=start;
+ofs<<"Pavarde        "<<"Vardas         ";
+for(int i=0;i<nd;i++) ofs<<"ND"<<i+1<<"     ";
+ofs<<"EGZ"<<endl;
+for(int i=0;i<N;i++){
+temp="Pavarde"+std::to_string(i);
+ofs<<temp;
+    for(int j=0;j<15-temp.size();j++) ofs<<" ";
+temp="Vardas"+std::to_string(i);
+ofs<<temp;
+    for(int j=0;j<15-temp.size();j++) ofs<<" ";
+    for(int j=0;j<nd;j++) {
+        x=rand() % 10 + 1;
+        ofs<<x;    
+        if(x==10) ofs<<"      ";
+        else ofs<<"       ";
     }
-    cin.clear();
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-}while(error);
-
- do {
-    cout<<"Generuoti random reiksmes? (y/n): ";    //Random reikšmių generacija
-    cin>>ats;
-    error=false;
-    if(ats!="Y" && ats!="y" && ats!="n" && ats!="N"){
-        error = true;
-        cout<<"Klaida! Netinkamas ivedimas. "<<endl;
-    }
-     cin.clear();
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-}while(error);
-
-if(ats=="y" || ats=="Y"){                           //Y- Random skaičių generacija
-    for(int j=0;j<pazymiai;j++){
-    x=rand()%10+1;
-    sarasas[size].nd.push_back(int());
-    sarasas[size].nd[j]=x;
+x=rand() % 10 + 1;
+ofs<<x;
+ofs<<endl;
 }
-cout<<"Sugeneruoti "<<pazymiai<<" pazymiai: ";
-for(int j=0;j<pazymiai;j++) cout<<sarasas[size].nd[j]<<" ";
-cout<<endl;
-sarasas[size].egz=rand()%10+1;
-cout<<"Sugeneruotas egzamino pazymys: "<<sarasas[size].egz<<endl;
-}
-
-if(ats=="n" || ats=="N"){                           //N- Skaičių įvedimas
-cout<<"Iveskite "<<pazymiai<<" pazymius: ";
-for(int j=0;j<pazymiai;j++){
-sarasas[size].nd.push_back(int());
-cin>>sarasas[size].nd[j];
-}
-
- do {
-    cout<<"Iveskite egzamino pazymi: ";
-    cin>>sarasas[size].egz;
-    error=false;
-    if(cin.fail() || sarasas[size].egz>10 || sarasas[size].egz<1){
-        error = true;
-        cout<<"Klaida! Netinkamas ivedimas. "<<endl;
-    }
-     cin.clear();
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-}while(error);
-}
-}
-
-else if(ats=="n" || ats=="N"){                  //Nežinant pažymių kiekio
-    do {
-    cout<<"Generuoti random reiksmes? (y/n): ";    
-    cin>>ats;
-    error=false;
-    if(ats!="Y" && ats!="y" && ats!="n" && ats!="N"){
-        error = true;
-        cout<<"Klaida! Netinkamas ivedimas. "<<endl;
-    }
-     cin.clear();
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-}while(error);
-
-if(ats=="N" || ats=="n"){       
-    int n=0;   
-    int x;                                //Įvedimas rankiniu būdu limitas 20 (neišsiaiškinau)
-cout << "Iveskite skaicius, atskiriant juos 'enter', jeigu skaicius paskutinis, iveskite raide, arba skaiciu >10 arba <1: ";
- do {
-    cin>>x;
-    error=true;
-    if(cin.fail() || x>10 || x<1){
-    error = false;
-    cout<<"Issaugota!"<<endl;
-    }
-    if(error==true) {
-       sarasas[size].nd.push_back(int());
-       sarasas[size].nd[n]=x;
-       n++;
-    }
-     cin.clear();
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-}while(error);
-
- do {
-    cout<<"Iveskite egzamino pazymi: ";
-    cin>>sarasas[size].egz;
-    error=false;
-    if(cin.fail() || sarasas[size].egz>10 || sarasas[size].egz<1){
-        error = true;
-        cout<<"Klaida! Netinkamas ivedimas. "<<endl;
-    }
-     cin.clear();
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-}while(error);
-}
-
-if(ats=="Y" || ats=="y"){                   ///Random reikšmių generacija (?)
-    int j=0;
-do{
-    x=rand()%10;
-    if(x!=0){
-    sarasas[size].nd.push_back(int());
-    sarasas[size].nd[j]=x;
-    }
-    j++;
-}while(x!=0);
-cout<<"Sugeneruoti "<<sarasas[size].nd.size()<<" pazymiai: ";
-for(int j=0;j<sarasas[size].nd.size();j++) cout<<sarasas[size].nd[j]<<" ";
-cout<<endl;
-sarasas[size].egz=rand()%10+1;
-cout<<"Sugeneruotas egzamino pazymys: "<<sarasas[size].egz<<endl;
-}
-}
-do {
-    cout<<"Prideti mokini? (y/n) ";
-    cin>>ats;
-    error=false;
-    if(ats!="Y" && ats!="y" && ats!="n" && ats!="N"){
-        error = true;
-        cout<<"Klaida! Netinkamas ivedimas. "<<endl;
-    }
-}while(error);
-if(ats=="n" && ats=="n") repeat=false;
-if(ats=="y" && ats=="Y") sarasas.push_back(Studentas());
-size++;
-}while (repeat);
-
+ofs.close();
+auto end = std::chrono::high_resolution_clock::now();
+std::chrono::duration<double> diff = end-start; // Skirtumas (s)
+cout<<"Failo kurimas uztruko: "<<diff.count()<<endl;
 }
 
 void skaitymas (vector<Studentas> &sarasas, int &size) {
 size=0;
-string eil;
-
-std::ifstream inf ("kursiokai.txt");
+int i;
+string temp;
+int tempr;
+string eil,line;
+vector<Studentas> tempStruct;
+tempStruct.push_back(Studentas());
+auto start = std::chrono::high_resolution_clock::now(); auto st=start;
+std::ifstream inf ("stud" + std::to_string(N) + ".txt");
 if(!inf.good()) throw "Nerastas failas!";
 getline(inf,eil);
-while (inf){
-if(!inf.eof()){
-sarasas.push_back(Studentas());
-inf>>sarasas[size].vardas>>sarasas[size].pavarde;
-for(int j=0;j<15;j++) {
-sarasas[size].nd.push_back(int());
-inf>>sarasas[size].nd[j];
-if(sarasas[size].nd[j]>10 || sarasas[size].nd[j]<1) throw "Netinkamas namu darbu pazymis skaitymo failel! Pazymis turi buti >=0 && <=10!";
-}
-inf>>sarasas[size].egz;
-if(sarasas[size].egz>10 || sarasas[size].egz<1) throw "Netinkamas egzamino pazymis skaitymo failel! Pazymis turi buti >=0 && <=10!";
-size++;
-inf.ignore();
-}
-else break;
-}
+    while(!inf.eof()){
+    inf>>temp;
+    tempStruct[0].vardas= temp;
+    inf>>temp;
+    tempStruct[0].pavarde= temp;
+        while(!inf.eof()){
+            inf>>tempr;
+            if (tempr>10 || tempr<1) throw "Netinkamas pazymis skaitymo faile! Pazymis turi buti >=0 && <=10!";
+            if(inf.peek()=='\n'||inf.peek() == inf.eof()){
+                tempStruct[0].egz = tempr;
+                break;
+            }
+            tempStruct[0].nd.push_back(tempr); 
+            i++;
+        }
+    sarasas.push_back(tempStruct[0]);
+    tempStruct[0] = {};
+    i=0;
+    size++;
+    inf.ignore();
+    }
 inf.close();
+auto end = std::chrono::high_resolution_clock::now();
+std::chrono::duration<double> diff = end-start; // Skirtumas (s)
+cout<<"Failo nuskaitymas uztruko: "<<diff.count()<<endl;
 }
 
 void rikiavimas (vector<Studentas> &sarasas, int size){
-for(int i=0;i<size-1;i++){
-for(int j=i+1;j<size;j++){
-if(sarasas[j].pavarde<sarasas[i].pavarde){
-std::swap(sarasas[i],sarasas[j]);
+    auto start = std::chrono::high_resolution_clock::now(); auto st=start;
+
+    for(int i=0;i<size;i++){
+        for(int j=i+1;j<size-i;j++){
+            if(sarasas[j].pavarde<sarasas[j++].pavarde){
+            std::swap(sarasas[j++],sarasas[j]);
 }}}
+auto end = std::chrono::high_resolution_clock::now();
+std::chrono::duration<double> diff = end-start; // Skirtumas (s)
+cout<<"Rikiavimas uztruko: "<<diff.count()<<endl;
 }
 
 double vidurkis (int kiek, vector<int> a) {
@@ -214,6 +98,7 @@ double vidurkisGalutinis (vector<Studentas> &sarasas, int size){
    for(int i=0;i<sarasas.size();i++){
       if(sarasas[i].nd.size()==0) sarasas[i].vid=0.6*sarasas[i].egz;
       else sarasas[i].vid=0.4*vidurkis((sarasas[i].nd.size()),sarasas[i].nd)+0.6*sarasas[i].egz;
+      sarasas[i].galutinis=round(sarasas[i].vid);
     } 
 }
 
@@ -225,19 +110,56 @@ double medianaGalutinis (vector<Studentas> &sarasas, int size) {
     }
     else if (sarasas[i].nd.size()%2!=0 && sarasas[i].nd.size()!=0) sarasas[i].med=(sarasas[i].nd[(sarasas[i].nd.size())/2])*0.4+sarasas[i].egz*0.6;
     if(sarasas[i].nd.size()==0) sarasas[i].med=0.6*sarasas[i].egz;
+    sarasas[i].galutinis=round(sarasas[i].med);
     }
 }
 
-double spausdinimas (vector<Studentas> sarasas, int size){
-cout<<"Pavarde        "<<"Vardas         "<<"Galutinis (Vid.) | Galutinis (Med.)"<<endl;
-cout<<"---------------------------------------------------------------------"<<endl;
+void rusiavimas (vector<Studentas> sarasas, vector<Studentas> &vargsiukai, vector<Studentas> &galvociai){
 for(int i=0;i<sarasas.size();i++){
-cout<<sarasas[i].pavarde;
-for(int j=0;j<15-(sarasas[i].pavarde.size());j++)cout<<" ";
-cout<<sarasas[i].vardas;
-for(int j=0;j<15-(sarasas[i].vardas.size());j++)cout<<" ";
-cout<<round(sarasas[i].vid);
-for(int j=0;j<15;j++)cout<<" ";
-cout<<round(sarasas[i].med)<<endl;
+    if(sarasas[i].galutinis>=5) galvociai.push_back(sarasas[i]);
+    if(sarasas[i].galutinis<5) vargsiukai.push_back(sarasas[i]);
 }
+sarasas.erase (sarasas.begin(),sarasas.begin()+sarasas.size());
+}
+
+void vSpausdinimas (vector<Studentas> vargsiukai,bool vm){
+    std::ofstream ofs ("vargsiukai.txt", std::ofstream::out);
+    auto start = std::chrono::high_resolution_clock::now(); auto st=start;
+if(vm==true)
+ofs<<"Pavarde        "<<"Vardas         "<<"Galutinis (Vid.)"<<endl;
+if(vm==false)
+ofs<<"Pavarde        "<<"Vardas         "<<"Galutinis (Med.)"<<endl;
+ofs<<"---------------------------------------------------------------------"<<endl;
+for(int i=0;i<vargsiukai.size();i++){
+ofs<<vargsiukai[i].pavarde;
+for(int j=0;j<15-(vargsiukai[i].pavarde.size());j++)ofs<<" ";
+ofs<<vargsiukai[i].vardas;
+for(int j=0;j<20-(vargsiukai[i].vardas.size());j++)ofs<<" ";
+ofs<<vargsiukai[i].galutinis<<endl;
+}
+ofs.close();
+auto end = std::chrono::high_resolution_clock::now();
+std::chrono::duration<double> diff = end-start; // Skirtumas (s)
+cout<<"Vargsiuku irasymas uztruko: "<<diff.count()<<endl;
+}
+
+void gSpausdinimas (vector<Studentas> galvociai, bool vm){
+    std::ofstream ofs ("galvociai.txt", std::ofstream::out);
+    auto start = std::chrono::high_resolution_clock::now(); auto st=start;
+if(vm==true)
+ofs<<"Pavarde        "<<"Vardas         "<<"Galutinis (Vid.)"<<endl;
+if(vm==false)
+ofs<<"Pavarde        "<<"Vardas         "<<"Galutinis (Med.)"<<endl;
+ofs<<"---------------------------------------------------------------------"<<endl;
+for(int i=0;i<galvociai.size();i++){
+ofs<<galvociai[i].pavarde;
+for(int j=0;j<15-(galvociai[i].pavarde.size());j++)ofs<<" ";
+ofs<<galvociai[i].vardas;
+for(int j=0;j<20-(galvociai[i].vardas.size());j++)ofs<<" ";
+ofs<<galvociai[i].galutinis<<endl;
+}
+ofs.close();
+auto end = std::chrono::high_resolution_clock::now();
+std::chrono::duration<double> diff = end-start; // Skirtumas (s)
+cout<<"Galvociu irasymas uztruko: "<<diff.count()<<endl;
 }
