@@ -13,6 +13,7 @@
 #include <iterator>
 #include <fstream>
 #include <algorithm>
+#include <chrono>
 
 using std::cin;
 using std::cout;
@@ -28,13 +29,18 @@ vector<int> nd;
 double egz, galutinis,med,vid;
 };
 
-void vedimasRanka (vector<Studentas> &sarasas,int &size);
+const int N= 100000;
+const int nd= 5;
+
+void kurimas ();
 void skaitymas (vector<Studentas> &sarasas, int &size);
 void rikiavimas (vector<Studentas> &sarasas, int size);
 double vidurkis (int kiek, vector<int> a);
 double vidurkisGalutinis (vector<Studentas> &sarasas, int size);
 double medianaGalutinis (vector<Studentas> &sarasas, int size);
-double spausdinimas (vector<Studentas> sarasas, int size);
+void rusiavimas (vector<Studentas> sarasas, vector<Studentas> &vargsiukai, vector<Studentas> &galvociai);
+void vSpausdinimas (vector<Studentas> vargsiukai,bool vm);
+void gSpausdinimas (vector<Studentas> galvociai, bool vm);
 
 
 #endif 
