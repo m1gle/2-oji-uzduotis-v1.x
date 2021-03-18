@@ -57,6 +57,14 @@ Bendrai uztruko: 0.019947
 **const int N = 100;**
 **const int N = 1000;**
 **const int N = 10000;**
+```
+Failo kurimas uztruko: 0.146522
+Failo nuskaitymas uztruko: 0.086667
+Rikiavimas uztruko: 0.418044
+Vargsiuku irasymas uztruko: 0.041247
+Galvociu irasymas uztruko: 0.101021
+Bendrai uztruko: 0.854584
+```
 **const int N = 100000;**
 ```
 Failo kurimas uztruko: 1.2541
