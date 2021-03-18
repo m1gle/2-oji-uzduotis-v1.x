@@ -55,7 +55,23 @@ Galvociu irasymas uztruko: 0.004987
 Bendrai uztruko: 0.019947
 ```
 **const int N = 100;**
+```
+Failo kurimas uztruko: 0.019577
+Failo nuskaitymas uztruko: 0.00199
+Rikiavimas uztruko: 0
+Vargsiuku irasymas uztruko: 0.008853
+Galvociu irasymas uztruko: 0.010346
+Bendrai uztruko: 0.051333
+```
 **const int N = 1000;**
+```
+Failo kurimas uztruko: 0.031775
+Failo nuskaitymas uztruko: 0.023602
+Rikiavimas uztruko: 0.013912
+Vargsiuku irasymas uztruko: 0.022567
+Galvociu irasymas uztruko: 0.018067
+Bendrai uztruko: 0.142536
+```
 **const int N = 10000;**
 ```
 Failo kurimas uztruko: 0.146522
