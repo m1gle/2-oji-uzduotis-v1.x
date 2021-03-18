@@ -29,7 +29,7 @@ Su v0.4
 **Norint keisti kuriamo failo dydį, 'header.h' reikia pakeisti konstantą N.**
 
 Pavyzdys:\
-```const int N = 10;```\
+**const int N = 10;**
 Programa paleidžiama.\
 Sukuriamas failas failas ("stud10.txt"):
 ```
@@ -45,7 +45,6 @@ Pavarde7       Vardas7        1       8       8       2       10      2
 Pavarde8       Vardas8        5       4       3       5       8       5
 Pavarde9       Vardas9        6       4       5       2       2       9
 ```
-
 Atspausdinimo rezultatas:
 ```
 Failo kurimas uztruko: 0.004987
@@ -55,7 +54,10 @@ Vargsiuku irasymas uztruko: 0.00399
 Galvociu irasymas uztruko: 0.004987
 Bendrai uztruko: 0.019947
 ```
-```const int N = 100000;```\
+**const int N = 100;**
+**const int N = 1000;**
+**const int N = 10000;**
+**const int N = 100000;**
 ```
 Failo kurimas uztruko: 1.2541
 Failo nuskaitymas uztruko: 0.795353
@@ -63,7 +65,6 @@ Rikiavimas uztruko: 47.724
 Vargsiuku irasymas uztruko: 0.900781
 Galvociu irasymas uztruko: 0.605568
 Bendrai uztruko: 51.7938```
-
 Išimčių valdymas:\
 Jeigu neranda skaitymo failo gaunama žinutė:
 ```
