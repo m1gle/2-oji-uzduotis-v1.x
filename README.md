@@ -88,7 +88,8 @@ Failo nuskaitymas uztruko: 0.795353
 Rikiavimas uztruko: 47.724
 Vargsiuku irasymas uztruko: 0.900781
 Galvociu irasymas uztruko: 0.605568
-Bendrai uztruko: 51.7938```
+Bendrai uztruko: 51.7938
+```
 Išimčių valdymas:\
 Jeigu neranda skaitymo failo gaunama žinutė:
 ```
