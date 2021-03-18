@@ -2,7 +2,7 @@
 
 Programa suskaičiuoja studento vidurkį arba medianą.
 
-Programos veikimas:\
+**Programos veikimas:**\
 Su v0.1:
 - įvesti vardą ir pavardę
 - įvesti arba sugeneruoti namų darbų pažymius bei egzamino balą
@@ -90,7 +90,7 @@ Vargsiuku irasymas uztruko: 0.900781
 Galvociu irasymas uztruko: 0.605568
 Bendrai uztruko: 51.7938
 ```
-Išimčių valdymas:\
+**Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
 ```
 Nerastas failas!
@@ -102,7 +102,7 @@ Netinkamas egzamino pazymis skaitymo failel! Pazymis turi buti >=0 && <=10!
 ```
 Programa sukurta naudojant std::vector ("vector")
 
-Įdiegimo instrukcija:  
+**Įdiegimo instrukcija: ** 
 Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą aplanką atlikti:
 - Paleidžiant užduotį su std::vector:\
 g++ -c function.cpp\
