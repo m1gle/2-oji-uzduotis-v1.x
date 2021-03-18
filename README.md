@@ -29,7 +29,7 @@ Su v0.4
 **Norint keisti kuriamo failo dydį, 'header.h' reikia pakeisti konstantą N.**
 
 Pavyzdys:\
-**const int N = 10;**
+**const int N = 10;**\
 Programa paleidžiama.\
 Sukuriamas failas failas ("stud10.txt"):
 ```
@@ -102,7 +102,7 @@ Netinkamas egzamino pazymis skaitymo failel! Pazymis turi buti >=0 && <=10!
 ```
 Programa sukurta naudojant std::vector ("vector")
 
-**Įdiegimo instrukcija: ** 
+**Įdiegimo instrukcija:** 
 Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą aplanką atlikti:
 - Paleidžiant užduotį su std::vector:\
 g++ -c function.cpp\
