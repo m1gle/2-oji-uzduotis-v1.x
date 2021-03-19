@@ -115,10 +115,15 @@ double medianaGalutinis (vector<Studentas> &sarasas, int size) {
 }
 
 void rusiavimas (vector<Studentas> sarasas, vector<Studentas> &vargsiukai, vector<Studentas> &galvociai){
+std::ofstream ofs ("vargsiukai.txt", std::ofstream::out);
+auto start = std::chrono::high_resolution_clock::now(); auto st=start;
 for(int i=0;i<sarasas.size();i++){
     if(sarasas[i].galutinis>=5) galvociai.push_back(sarasas[i]);
     if(sarasas[i].galutinis<5) vargsiukai.push_back(sarasas[i]);
 }
+auto end = std::chrono::high_resolution_clock::now();
+std::chrono::duration<double> diff = end-start; // Skirtumas (s)
+cout<<"Rusiavimas uztruko: "<<diff.count()<<endl;
 sarasas.erase (sarasas.begin(),sarasas.begin()+sarasas.size());
 }
 
