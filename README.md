@@ -52,45 +52,42 @@ Vargsiuku irasymas uztruko: 0.00399
 Galvociu irasymas uztruko: 0.004987
 Bendrai uztruko: 0.019947
 ```
-**const int N = 100;**
-```
-Failo kurimas uztruko: 0.007978
-Failo nuskaitymas uztruko: 0.000992
-Vargsiuku irasymas uztruko: 0.00485
-Galvociu irasymas uztruko: 0.006961
-Bendrai uztruko: 0.024775
-```
+
 **const int N = 1000;**
 ```
-Failo kurimas uztruko: 0.021851
-Failo nuskaitymas uztruko: 0.0096
-Vargsiuku irasymas uztruko: 0.010006
-Galvociu irasymas uztruko: 0.012964
-Bendrai uztruko: 0.067016
+Failo kurimas uztruko: 0.023946
+Failo nuskaitymas uztruko: 0.009972
+Rusiavimas uztruko: 0.001008
+Vargsiuku irasymas uztruko: 0.010874
+Galvociu irasymas uztruko: 0.014961
+Bendrai uztruko: 0.067546
 ```
 **const int N = 10000;**
 ```
-Failo kurimas uztruko: 0.135198
-Failo nuskaitymas uztruko: 0.111621
-Vargsiuku irasymas uztruko: 0.039841
-Galvociu irasymas uztruko: 0.07237
-Bendrai uztruko: 0.386544
+Failo kurimas uztruko: 0.139806
+Failo nuskaitymas uztruko: 0.10682
+Rusiavimas uztruko: 0.008979
+Vargsiuku irasymas uztruko: 0.041861
+Galvociu irasymas uztruko: 0.071683
+Bendrai uztruko: 0.391316
 ```
 **const int N = 100000;**
 ```
-Failo kurimas uztruko: 1.24907
-Failo nuskaitymas uztruko: 0.800202
-Vargsiuku irasymas uztruko: 0.306897
-Galvociu irasymas uztruko: 0.643169
-Bendrai uztruko: 3.25709
+Failo kurimas uztruko: 1.29286
+Failo nuskaitymas uztruko: 0.913612
+Rusiavimas uztruko: 0.126279
+Vargsiuku irasymas uztruko: 0.307575
+Galvociu irasymas uztruko: 0.687843
+Bendrai uztruko: 3.48651
 ```
 **const int N = 1000000;**
 ```
-Failo kurimas uztruko: 13.0409
-Failo nuskaitymas uztruko: 8.3161
-Vargsiuku irasymas uztruko: 3.05916
-Galvociu irasymas uztruko: 6.21536
-Bendrai uztruko: 33.1467
+Failo kurimas uztruko: 12.8814
+Failo nuskaitymas uztruko: 7.99245
+Rusiavimas uztruko: 1.01187
+Vargsiuku irasymas uztruko: 3.01465
+Galvociu irasymas uztruko: 5.99765
+Bendrai uztruko: 32.3834
 ```
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
