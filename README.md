@@ -108,3 +108,8 @@ Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą a
 g++ -c function.cpp\
 g++ -o vector vector.cpp function.o\
 ./vector
+
+```diff
++ this text is highlighted in green
+- this text is highlighted in red
+```
