@@ -26,8 +26,9 @@ Su v0.4
 - studentai surušiuojami į dvi grupes pagal galutinį pažymį <5: "vargsiukai", >=5: "galvociai"
 - skaičiuojamas bendras programos ir kiekvienos funkcijos veikimo laikas bei atspausdinamas
 
-**Norint keisti kuriamo failo dydį, 'header.h' reikia pakeisti konstantą N.**
-
+```dif
++ **Norint keisti kuriamo failo dydį, 'header.h' reikia pakeisti konstantą N.**
+```
 Pavyzdys:\
 **const int N = 10;**\
 Programa paleidžiama.\
