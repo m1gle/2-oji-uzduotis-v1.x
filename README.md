@@ -22,7 +22,6 @@ Su v0.4
 - programa nieko vartotojo nebeklausia
 - sukuriamas failas
 - nuskaitomas failas
-- surikiuojamas failas
 - studentai surušiuojami į dvi grupes pagal galutinį pažymį <5: "vargsiukai", >=5: "galvociai"
 - skaičiuojamas bendras programos ir kiekvienos funkcijos veikimo laikas bei atspausdinamas
 
@@ -49,46 +48,49 @@ Atspausdinimo rezultatas:
 ```
 Failo kurimas uztruko: 0.004987
 Failo nuskaitymas uztruko: 0
-Rikiavimas uztruko: 0
 Vargsiuku irasymas uztruko: 0.00399
 Galvociu irasymas uztruko: 0.004987
 Bendrai uztruko: 0.019947
 ```
 **const int N = 100;**
 ```
-Failo kurimas uztruko: 0.019577
-Failo nuskaitymas uztruko: 0.00199
-Rikiavimas uztruko: 0
-Vargsiuku irasymas uztruko: 0.008853
-Galvociu irasymas uztruko: 0.010346
-Bendrai uztruko: 0.051333
+Failo kurimas uztruko: 0.007978
+Failo nuskaitymas uztruko: 0.000992
+Vargsiuku irasymas uztruko: 0.00485
+Galvociu irasymas uztruko: 0.006961
+Bendrai uztruko: 0.024775
 ```
 **const int N = 1000;**
 ```
-Failo kurimas uztruko: 0.031775
-Failo nuskaitymas uztruko: 0.023602
-Rikiavimas uztruko: 0.013912
-Vargsiuku irasymas uztruko: 0.022567
-Galvociu irasymas uztruko: 0.018067
-Bendrai uztruko: 0.142536
+Failo kurimas uztruko: 0.021851
+Failo nuskaitymas uztruko: 0.0096
+Vargsiuku irasymas uztruko: 0.010006
+Galvociu irasymas uztruko: 0.012964
+Bendrai uztruko: 0.067016
 ```
 **const int N = 10000;**
 ```
-Failo kurimas uztruko: 0.146522
-Failo nuskaitymas uztruko: 0.086667
-Rikiavimas uztruko: 0.418044
-Vargsiuku irasymas uztruko: 0.041247
-Galvociu irasymas uztruko: 0.101021
-Bendrai uztruko: 0.854584
+Failo kurimas uztruko: 0.135198
+Failo nuskaitymas uztruko: 0.111621
+Vargsiuku irasymas uztruko: 0.039841
+Galvociu irasymas uztruko: 0.07237
+Bendrai uztruko: 0.386544
 ```
 **const int N = 100000;**
 ```
-Failo kurimas uztruko: 1.2541
-Failo nuskaitymas uztruko: 0.795353
-Rikiavimas uztruko: 47.724
-Vargsiuku irasymas uztruko: 0.900781
-Galvociu irasymas uztruko: 0.605568
-Bendrai uztruko: 51.7938
+Failo kurimas uztruko: 1.24907
+Failo nuskaitymas uztruko: 0.800202
+Vargsiuku irasymas uztruko: 0.306897
+Galvociu irasymas uztruko: 0.643169
+Bendrai uztruko: 3.25709
+```
+**const int N = 1000000;**
+```
+Failo kurimas uztruko: 13.0409
+Failo nuskaitymas uztruko: 8.3161
+Vargsiuku irasymas uztruko: 3.05916
+Galvociu irasymas uztruko: 6.21536
+Bendrai uztruko: 33.1467
 ```
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
