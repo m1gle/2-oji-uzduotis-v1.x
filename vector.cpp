@@ -17,7 +17,7 @@ try {
 }
 
 vidurkisGalutinis(sarasas,size);
-rikiavimas(sarasas,size);
+//rikiavimas(sarasas,size);
 rusiavimas(sarasas,vargsiukai,galvociai);
 vSpausdinimas(vargsiukai,true);
 gSpausdinimas(galvociai,true);
