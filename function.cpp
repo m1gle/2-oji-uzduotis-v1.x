@@ -128,6 +128,7 @@ sarasas.erase (sarasas.begin(),sarasas.begin()+sarasas.size());
 }
 
 void vSpausdinimas (vector<Studentas> vargsiukai,bool vm){
+    string temp; 
     std::ofstream ofs ("vargsiukai.txt", std::ofstream::out);
     auto start = std::chrono::high_resolution_clock::now(); auto st=start;
 if(vm==true)
@@ -136,11 +137,13 @@ if(vm==false)
 ofs<<"Pavarde        "<<"Vardas         "<<"Galutinis (Med.)"<<endl;
 ofs<<"---------------------------------------------------------------------"<<endl;
 for(int i=0;i<vargsiukai.size();i++){
-ofs<<vargsiukai[i].pavarde;
-for(int j=0;j<15-(vargsiukai[i].pavarde.size());j++)ofs<<" ";
-ofs<<vargsiukai[i].vardas;
-for(int j=0;j<20-(vargsiukai[i].vardas.size());j++)ofs<<" ";
-ofs<<vargsiukai[i].galutinis<<endl;
+temp += vargsiukai[i].pavarde;
+for(int j=0;j<15-(vargsiukai[i].pavarde.size());j++)temp +=" ";
+temp += vargsiukai[i].vardas;
+for(int j=0;j<20-(vargsiukai[i].vardas.size());j++)temp +=" ";
+//temp += std::to_string(vargsiukai[i].galutinis);
+ofs<<temp<<std::setprecision(0)<<vargsiukai[i].galutinis<<endl;
+temp.clear();
 }
 ofs.close();
 auto end = std::chrono::high_resolution_clock::now();
@@ -149,6 +152,7 @@ cout<<"Vargsiuku irasymas uztruko: "<<diff.count()<<endl;
 }
 
 void gSpausdinimas (vector<Studentas> galvociai, bool vm){
+    string temp; 
     std::ofstream ofs ("galvociai.txt", std::ofstream::out);
     auto start = std::chrono::high_resolution_clock::now(); auto st=start;
 if(vm==true)
@@ -157,11 +161,13 @@ if(vm==false)
 ofs<<"Pavarde        "<<"Vardas         "<<"Galutinis (Med.)"<<endl;
 ofs<<"---------------------------------------------------------------------"<<endl;
 for(int i=0;i<galvociai.size();i++){
-ofs<<galvociai[i].pavarde;
-for(int j=0;j<15-(galvociai[i].pavarde.size());j++)ofs<<" ";
-ofs<<galvociai[i].vardas;
-for(int j=0;j<20-(galvociai[i].vardas.size());j++)ofs<<" ";
-ofs<<galvociai[i].galutinis<<endl;
+temp += galvociai[i].pavarde;
+for(int j=0;j<15-(galvociai[i].pavarde.size());j++)temp += " ";
+temp += galvociai[i].vardas;
+for(int j=0;j<20-(galvociai[i].vardas.size());j++)temp += " ";
+//temp += std::to_string(galvociai[i].galutinis);
+ofs<<temp<<std::setprecision(0)<<galvociai[i].galutinis<<endl;
+temp.clear();
 }
 ofs.close();
 auto end = std::chrono::high_resolution_clock::now();
