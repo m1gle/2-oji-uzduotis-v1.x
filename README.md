@@ -1,4 +1,4 @@
-# [2-oji-užduotis v0.4]
+# [2-oji-užduotis v0.5]
 
 Programa suskaičiuoja studento vidurkį arba medianą.
 
@@ -24,6 +24,11 @@ Su v0.4
 - nuskaitomas failas
 - studentai surušiuojami į dvi grupes pagal galutinį pažymį <5: "vargsiukai", >=5: "galvociai"
 - skaičiuojamas bendras programos ir kiekvienos funkcijos veikimo laikas bei atspausdinamas
+
+Su v0.5 (Konteinerių testavimas)
+- programa papildomai parašyta naudojant std::list ir std::deque
+- testuotjamas nuskaitymo ir rūšiavimo į dvi grupes greitis
+
 
 **Norint keisti kuriamo failo dydį, 'header.h' reikia pakeisti konstantą N.**
 
