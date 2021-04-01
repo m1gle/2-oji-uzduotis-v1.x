@@ -122,7 +122,6 @@ for(int j=0;j<20-(it->vardas.size());j++)temp +=" ";
 //temp += std::to_string(vargsiukai[i].galutinis);
 ofs<<temp<<std::setprecision(0)<<it->galutinis<<endl;
 temp.clear();
-it++;
 }
 ofs.close();
 }
