@@ -36,7 +36,7 @@ Testavimo sistemos parametrai:
 
 **Norint keisti kuriamo failo dydį, 'header.h' reikia pakeisti konstantą N.**
 
-**const int N = 100;**
+**const int N = 100;**\
 vector:
 ```
 Failo nuskaitymas uztruko: 0.001992
@@ -52,7 +52,7 @@ deque:
 Failo nuskaitymas uztruko: 0
 Rusiavimas uztruko: 0  
 ```
-**const int N = 1000;**
+**const int N = 1000;**\
 vector:
 ```
 Failo nuskaitymas uztruko: 0.008974
@@ -68,7 +68,7 @@ deque:
 Failo nuskaitymas uztruko: 0.015709
 Rusiavimas uztruko: 0.000997 
 ```
-**const int N = 10000;**
+**const int N = 10000;**\
 vector:
 ```
 Failo nuskaitymas uztruko: 0.087806
@@ -84,7 +84,7 @@ deque:
 Failo nuskaitymas uztruko: 0.078106
 Rusiavimas uztruko: 0.012964
 ```
-**const int N = 100000;**
+**const int N = 100000;**\
 vector:
 ```
 Failo nuskaitymas uztruko: 0.826023
@@ -100,7 +100,7 @@ deque:
 Failo nuskaitymas uztruko: 0.782703
 Rusiavimas uztruko: 0.124971
 ```
-**const int N = 1000000;**
+**const int N = 1000000;**\
 vector:
 ```
 Failo nuskaitymas uztruko: 7.92043
