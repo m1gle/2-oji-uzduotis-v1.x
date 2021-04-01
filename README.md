@@ -55,7 +55,8 @@ Rusiavimas uztruko: 0
 **const int N = 1000;**
 vector:
 ```
-
+Failo nuskaitymas uztruko: 0.008974
+Rusiavimas uztruko: 0.000998
 ```
 list:
 ```
@@ -64,12 +65,14 @@ Rusiavimas uztruko: 0.000997
 ```
 deque:
 ```
-
+Failo nuskaitymas uztruko: 0.015709
+Rusiavimas uztruko: 0.000997 
 ```
 **const int N = 10000;**
 vector:
 ```
-
+Failo nuskaitymas uztruko: 0.087806
+Rusiavimas uztruko: 0.007964
 ```
 list:
 ```
@@ -78,12 +81,14 @@ Rusiavimas uztruko: 0.012942
 ```
 deque:
 ```
-
+Failo nuskaitymas uztruko: 0.078106
+Rusiavimas uztruko: 0.012964
 ```
 **const int N = 100000;**
 vector:
 ```
-
+Failo nuskaitymas uztruko: 0.826023
+Rusiavimas uztruko: 0.10834
 ```
 list:
 ```
@@ -92,12 +97,14 @@ Rusiavimas uztruko: 0.124971
 ```
 deque:
 ```
-
+Failo nuskaitymas uztruko: 0.782703
+Rusiavimas uztruko: 0.124971
 ```
 **const int N = 1000000;**
 vector:
 ```
-
+Failo nuskaitymas uztruko: 7.92043
+Rusiavimas uztruko: 0.961516
 ```
 list:
 ```
@@ -106,7 +113,8 @@ Rusiavimas uztruko: 1.22438
 ```
 deque:
 ```
-
+Failo nuskaitymas uztruko: 7.77574
+Rusiavimas uztruko: 1.27689
 ```
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
