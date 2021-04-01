@@ -62,7 +62,7 @@ Blogas pažymio ir egzamino įvedimas faile išmeta:
 Netinkamas namu darbu pazymis skaitymo failel! Pazymis turi buti >=0 && <=10!
 Netinkamas egzamino pazymis skaitymo failel! Pazymis turi buti >=0 && <=10!
 ```
-Programa sukurta naudojant std::vector ("vector")
+Programos sukurtos naudojant std::vector ("vector"), std::list ("list"), std::deque ("deque").
 
 **Įdiegimo instrukcija:**\
 Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą aplanką atlikti:
