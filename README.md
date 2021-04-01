@@ -69,4 +69,12 @@ Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą a
 - Paleidžiant užduotį su std::vector:\
 g++ -c function.cpp\
 g++ -o vector vector.cpp function.o\
-./vector
+./vector\
+- Paleidžiant užduotį su std::list:\
+g++ -c function.cpp\
+g++ -o vector list.cpp list.o\
+./list\
+- Paleidžiant užduotį su std::deque:\
+g++ -c function.cpp\
+g++ -o deque deque.cpp function.o\
+./deque
