@@ -130,7 +130,7 @@ Rusiavimas uztruko: 11.81638
 ```
 deque:
 ```
-Failo nuskaitymas uztruko: 91.77574
+Failo nuskaitymas uztruko: 89.77574
 Rusiavimas uztruko: 14.27689
 ```
 **Išimčių valdymas:**\
