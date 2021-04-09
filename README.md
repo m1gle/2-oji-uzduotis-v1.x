@@ -117,6 +117,22 @@ deque:
 Failo nuskaitymas uztruko: 7.77574
 Rusiavimas uztruko: 1.27689
 ```
+**const int N = 10000000;**\
+vector:
+```
+Failo nuskaitymas uztruko: 82.42103
+Rusiavimas uztruko: 7.87416
+```
+list:
+```
+Failo nuskaitymas uztruko: 89.48153
+Rusiavimas uztruko: 12.81638
+```
+deque:
+```
+Failo nuskaitymas uztruko: 7.77574
+Rusiavimas uztruko: 1.27689
+```
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
 ```
