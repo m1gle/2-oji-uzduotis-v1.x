@@ -32,7 +32,8 @@ Su v0.5 (Konteinerių testavimas)
 Testavimo sistemos parametrai: 
 - CPU: Intel i5 8250U (4 cores, 8 threads)
 - RAM: 12GB DDR4
-- SSD: Hynix 256GB SATA 3
+- SSD: Hynix 256GB SATA 3.0 (OS)
+- SSD: Crucial 1TB SATA 3.0
 
 **Norint keisti kuriamo failo dydį, 'header.h' reikia pakeisti konstantą N.**
 
