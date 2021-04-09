@@ -126,12 +126,12 @@ Rusiavimas uztruko: 7.87416
 list:
 ```
 Failo nuskaitymas uztruko: 87.48153
-Rusiavimas uztruko: 12.81638
+Rusiavimas uztruko: 11.81638
 ```
 deque:
 ```
 Failo nuskaitymas uztruko: 91.77574
-Rusiavimas uztruko: 1.27689
+Rusiavimas uztruko: 14.27689
 ```
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
