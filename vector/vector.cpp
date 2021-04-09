@@ -6,7 +6,7 @@ int kiek,pazymiai,x,size;
 string ats;
 bool error,repeat;
 string input;
-kurimas();
+//kurimas();
 try {
     skaitymas(sarasas,size);
     } catch (const char* msg) {
