@@ -61,7 +61,7 @@ Programos sukurtos naudojant std::vector ("vector"), std::list ("list"), std::de
 Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą aplanką atlikti:
 - Kompiliavimui atitinkamai naudoti make vector/deque/list komandą:\
 - .o failo ištrinimui naudoti make clean komandą.
-- Paleisti ./[pavadinimas]
+- Paleisti ./[pavadinimas]\
 Makefile:
 ```
 clean:
