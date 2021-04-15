@@ -40,6 +40,9 @@ Strategijos:
 Pritaikytų strategijų rezultatai:
 ![alt text](https://i.imgur.com/Hc91QcR.png)
 
+2 strategiją pakeičiau naudojant remove_if, kuriuo iš sarašo ištryniau studentus, kurių pažymys <5:
+![alt text](https://i.imgur.com/OY0tpCu.png)
+
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
 ```
