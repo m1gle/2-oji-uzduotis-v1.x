@@ -39,9 +39,11 @@ Strategijos:
 
 Pritaikytų strategijų rezultatai:
 ![alt text](https://i.imgur.com/Hc91QcR.png)
+Rezultatas: 1 strategijoje greičiau veikia vector, o deque ir list sparta priklauso nuo studentų sarašo dydžio. 2 strategijoje vector ir deque naudojant vector::erase ir deque::erase programa žymiai lėčiau veikia, nei list, kurioje irgi buvo naudota list::erase.
 
 2 strategiją pakeičiau naudojant remove_if, kuriuo iš sarašo ištryniau studentus, kurių pažymys <5:
 ![alt text](https://i.imgur.com/OY0tpCu.png)
+Rezultatas: std::vector pakoreguota 2 strategija ir vietoj vector::erase panaudota std::remove_if bei tai gerokai paspartino rūšiavimo spartą.
 
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
