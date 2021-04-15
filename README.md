@@ -1,7 +1,5 @@
 # [2-oji-užduotis v1.0]
 
-![alt text](https://i.imgur.com/Hc91QcR.png)
-
 Programa suskaičiuoja studento vidurkį arba medianą.
 
 **Programos veikimas:**\
@@ -39,7 +37,7 @@ Strategijos:
 - 1 strategija: Bendro studentai konteinerio (vector, list ir deque tipų) skaidymas (rūšiavimas) į du naujus to paties tipo konteinerius: "vargšiukų" ir "kietiakų". Tokiu būdu tas pats studentas yra dvejuose konteineriuose: bendrame studentai ir viename iš suskaidytų (vargšiukai arba kietiakai).
 - 2 strategija: Bendro studentų konteinerio (vector, list ir deque) skaidymas (rūšiavimas) panaudojant tik vieną naują konteinerį: "vargšiukai". Tokiu būdu, jei studentas yra vargšiukas, jį turime įkelti į naująjį "vargšiukų" konteinerį ir ištrinti iš bendro studentai konteinerio. Po šio žingsnio studentai konteineryje liks vien tik kietiakai. 
 
-Strategijų pritaikyti rezultatai:
+Pritaikytų strategijų rezultatai:
 ![alt text](https://i.imgur.com/Hc91QcR.png)
 
 Testavimo sistemos parametrai: 
