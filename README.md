@@ -40,12 +40,6 @@ Strategijos:
 Pritaikytų strategijų rezultatai:
 ![alt text](https://i.imgur.com/Hc91QcR.png)
 
-Testavimo sistemos parametrai: 
-- CPU: Intel i5 8250U (4 cores, 8 threads)
-- RAM: 12GB DDR4
-- SSD: Hynix 256GB SATA 3.0 (OS)
-- SSD: Crucial 1TB SATA 3.0
-
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
 ```
@@ -72,3 +66,9 @@ g++ -o vector list.cpp list.o\
 g++ -c function.cpp\
 g++ -o deque deque.cpp function.o\
 ./deque
+
+Testavimo sistemos parametrai: 
+- CPU: Intel i5 8250U (4 cores, 8 threads)
+- RAM: 12GB DDR4
+- SSD: Hynix 256GB SATA 3.0 (OS)
+- SSD: Crucial 1TB SATA 3.0
