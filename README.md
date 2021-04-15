@@ -59,18 +59,8 @@ Programos sukurtos naudojant std::vector ("vector"), std::list ("list"), std::de
 
 **Įdiegimo instrukcija:**\
 Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą aplanką atlikti:
-- Paleidžiant užduotį su std::vector:\
-g++ -c function.cpp\
-g++ -o vector vector.cpp function.o\
-./vector
-- Paleidžiant užduotį su std::list:\
-g++ -c function.cpp\
-g++ -o vector list.cpp list.o\
-./list
-- Paleidžiant užduotį su std::deque:\
-g++ -c function.cpp\
-g++ -o deque deque.cpp function.o\
-./deque
+- Kompiliavimui atitinkamai naudoti make vector/deque/list komandą:\
+- .o failo ištrinimui naudoti make clean komandą.
 
 Testavimo sistemos parametrai: 
 - CPU: Intel i5 8250U (4 cores, 8 threads)
