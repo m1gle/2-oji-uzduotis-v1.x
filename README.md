@@ -1,6 +1,6 @@
 # [2-oji-užduotis v1.0]
 
-![alt text](https://imgur.com/a/6gUnh54)
+![alt text](https://i.imgur.com/Q1rbbXn.png)
 
 Programa suskaičiuoja studento vidurkį arba medianą.
 
