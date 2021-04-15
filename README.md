@@ -31,7 +31,7 @@ Su v0.5 (Konteinerių testavimas)
 
 Su v1.0 (Rūšiavimo optimizavimas)
 - std::vector, std::deque ir std::list konteineriams rūšiavimo funkcijai pritaikytos dvi strategijos
-- testuotjamas dviejų strategijų nuskaitymo, rūšiavimo į dvi grupes ir bendras programos greitis
+- testuojamas dviejų strategijų nuskaitymo, rūšiavimo į dvi grupes ir bendras programos greitis
 
 Strategijos:
 - 1 strategija: Bendro studentai konteinerio (vector, list ir deque tipų) skaidymas (rūšiavimas) į du naujus to paties tipo konteinerius: "vargšiukų" ir "kietiakų". Tokiu būdu tas pats studentas yra dvejuose konteineriuose: bendrame studentai ir viename iš suskaidytų (vargšiukai arba kietiakai).
