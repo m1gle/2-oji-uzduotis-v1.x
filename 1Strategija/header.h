@@ -29,9 +29,6 @@ vector<int> nd;
 double egz, galutinis,med,vid;
 };
 
-//const int N= 100000;
-const int nd= 5;
-
 void skaitymas (vector<Studentas> &sarasas, int &size, int N);
 void rikiavimas (vector<Studentas> &sarasas, int size);
 double vidurkis (int kiek, vector<int> a);
