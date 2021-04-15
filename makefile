@@ -1,8 +1,5 @@
-CC = "C:\MinGW\bin\g++.exe"
-LDFLAGS = -lgdi32
-
 clean:
-	del *.o
+	rm *.o
 vector: 
 	g++ -c function.cpp && g++ -o vector vector.cpp function.o
 list: 
