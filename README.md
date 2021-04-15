@@ -61,6 +61,17 @@ Programos sukurtos naudojant std::vector ("vector"), std::list ("list"), std::de
 Atsisiųsti _release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą aplanką atlikti:
 - Kompiliavimui atitinkamai naudoti make vector/deque/list komandą:\
 - .o failo ištrinimui naudoti make clean komandą.
+Makefile:
+```
+clean:
+	rm *.o
+vector: 
+	g++ -c function.cpp && g++ -o vector vector.cpp function.o
+list: 
+	g++ -c function.cpp && g++ -o list list.cpp function.o
+deque: 
+	g++ -c function.cpp && g++ -o deque deque.cpp function.o
+```
 
 Testavimo sistemos parametrai: 
 - CPU: Intel i5 8250U (4 cores, 8 threads)
