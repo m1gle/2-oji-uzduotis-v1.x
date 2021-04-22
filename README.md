@@ -58,10 +58,6 @@ Su v1.1
 | v1.1 | O2 | 2.2216 | 20.8976 | 178KB |
 | v1.1 | O3 | 2.1694 | 20.8815 | 178KB |
 
-
-Gauti laikai:\
-![alt text](https://i.imgur.com/TdL4xIa.png)
-
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
 ```
