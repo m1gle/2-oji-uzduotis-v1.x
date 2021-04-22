@@ -50,10 +50,12 @@ Su v1.1
 - palyginimi programos veikimo laikai su ankščiau kurta std::vector struktūra
 - panaudojami optimizavimo flag'ai, palyginami rezultatai
 
-| Versija  | Flag'as |
-| ------------- | ------------- |
+| Versija  | Flag'as | 100000 studentų failas | 1000000 studentų failas | Failo dydis |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
+
+
 Gauti laikai:\
 ![alt text](https://i.imgur.com/TdL4xIa.png)
 
