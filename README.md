@@ -51,7 +51,7 @@ Su v1.1
 - panaudojami optimizavimo flag'ai, palyginami rezultatai
 
 Gauti laikai:
-![alt text](https://i.imgur.com/wen13XJ.png)
+![alt text](https://i.imgur.com/TdL4xIa.png)
 
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
