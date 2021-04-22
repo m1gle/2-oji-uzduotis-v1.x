@@ -52,8 +52,11 @@ Su v1.1
 
 | Versija  | Flag'as | 100000 studentų failas | 1000000 studentų failas | Failo dydis |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
 
 
 Gauti laikai:\
