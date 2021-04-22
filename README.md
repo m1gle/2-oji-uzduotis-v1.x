@@ -1,4 +1,4 @@
-# [2-oji-užduotis v1.0]
+# [2-oji-užduotis v1.1]
 
 Programa suskaičiuoja studento vidurkį arba medianą.
 
@@ -44,6 +44,14 @@ Rezultatas: 1 strategijoje greičiau veikia vector, o deque ir list sparta prikl
 2 strategiją pakeičiau naudojant remove_if, kuriuo iš sarašo ištryniau studentus, kurių pažymys <5:
 ![alt text](https://i.imgur.com/OY0tpCu.png)
 Rezultatas: std::vector pakoreguota 2 strategija ir vietoj vector::erase panaudota std::remove_if bei tai gerokai paspartino rūšiavimo greitį.
+
+Su v1.1
+- vietoj vektoriaus struktūros naudojama vectoriaus klasė
+- palyginimi programos veikimo laikai su ankščiau kurta std::vector struktūra
+- panaudojami optimizavimo flag'ai, palyginami rezultatai
+
+Gauti laikai:
+![alt text](https://i.imgur.com/wen13XJ.png)
 
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
