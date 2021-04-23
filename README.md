@@ -53,6 +53,9 @@ Su v1.1
 | Versija  | Naudojamas tipas | Flag'as | 100000 studentų failas | 1000000 studentų failas | Failo dydis |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | v1.0 | struktūra | nėra | 2.1747 | 20.9054 | 188KB |
+| v1.1 | struktūra | O1 | 2.0345 | 20.0918 | 184KB |
+| v1.1 | struktūra| O2 | 2.1033 | 19.5852 | 184KB |
+| v1.1 | struktūra| O3 | 2.0104 | 19.5326 | 184KB |
 | v1.1 | klasė | nėra | 2.0273 | 22.1732 | 178KB |
 | v1.1 | klasė | O1 | 2.1664 | 21.0803 | 178KB |
 | v1.1 | klasė| O2 | 2.2216 | 20.8976 | 178KB |
