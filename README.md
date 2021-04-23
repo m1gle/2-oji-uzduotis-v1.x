@@ -51,7 +51,7 @@ Su v1.1
 - panaudojami optimizavimo flag'ai, palyginami rezultatai
 
 | Versija  | Naudojamas tipas | Flag'as | 100000 studentų failas | 1000000 studentų failas | Failo dydis |
-| ------------- | ------------- | ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | v1.0 | struktūra | nėra | 2.1747 | 20.9054 | 188KB |
 | v1.1 | klasė | nėra | 2.0273 | 22.1732 | 178KB |
 | v1.1 | klasė | O1 | 2.1664 | 21.0803 | 178KB |
