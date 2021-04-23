@@ -50,13 +50,13 @@ Su v1.1
 - palyginimi programos veikimo laikai su ankščiau kurta std::vector struktūra
 - panaudojami optimizavimo flag'ai, palyginami rezultatai
 
-| Versija  | Flag'as | 100000 studentų failas | 1000000 studentų failas | Failo dydis |
+| Versija  | Naudojamas tipas | Flag'as | 100000 studentų failas | 1000000 studentų failas | Failo dydis |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| v1.0 | nėra | 2.1747 | 20.9054 | 188KB |
-| v1.1 | nėra | 2.0273 | 22.1732 | 178KB |
-| v1.1 | O1 | 2.1664 | 21.0803 | 178KB |
-| v1.1 | O2 | 2.2216 | 20.8976 | 178KB |
-| v1.1 | O3 | 2.1694 | 20.8815 | 178KB |
+| v1.0 | struktūra | nėra | 2.1747 | 20.9054 | 188KB |
+| v1.1 | klasė | nėra | 2.0273 | 22.1732 | 178KB |
+| v1.1 | klasė | O1 | 2.1664 | 21.0803 | 178KB |
+| v1.1 | klasė| O2 | 2.2216 | 20.8976 | 178KB |
+| v1.1 | klasė| O3 | 2.1694 | 20.8815 | 178KB |
 
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
