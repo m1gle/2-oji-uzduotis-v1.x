@@ -38,7 +38,7 @@ public:
         setReiksmes("a","b",10,10);
     }
 // Destruktorius:
-    Studentas::~Studentas(){}
+    ~Studentas() {}
 // Seteriai:
     void setVardas(string vardas){this->vardas = vardas;}
     void setPavarde (string pavarde){this->pavarde = pavarde;}
