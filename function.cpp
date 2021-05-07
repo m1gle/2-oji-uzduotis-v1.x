@@ -49,7 +49,7 @@ double sum=0;
 return v;
 }
 
-double vidurkisGalutinis (vector<Studentas> &sarasas){
+void vidurkisGalutinis (vector<Studentas> &sarasas){
     double vid;
    for(int i=0;i<sarasas.size();i++){
       if(sarasas[i].getPazymiai().size()==0) vid=0.6*sarasas[i].getEgzaminas();
