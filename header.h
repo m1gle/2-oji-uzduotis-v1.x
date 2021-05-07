@@ -26,38 +26,37 @@ using std::string;
 
 class Studentas {
 private:
-  string vardas;
-  string pavarde;
-  int egzaminas;
-  vector<int> nd;
-  int galutinis;
+  string vardas_;
+  string pavarde_;
+  int egzaminas_;
+  vector<int> nd_;
+  int galutinis_;
   
 public:
 // Konstruktoriai:
-    Studentas(){
-        setReiksmes("a","b",10,10);
-    }
+    Studentas(): egzaminas_(0){ }
 // Destruktorius:
-    ~Studentas() {}
+    ~Studentas() {nd_.clear();}
+
 // Seteriai:
-    void setVardas(string vardas){this->vardas = vardas;}
-    void setPavarde (string pavarde){this->pavarde = pavarde;}
-    void setEgzaminas (int egzaminas){this->egzaminas = egzaminas;}
-    void setPazymys (int pazymys){nd.push_back(pazymys);}
-    void setGalutinis (double galutinis){this->galutinis = galutinis;}
+    void setVardas(string vardas){this->vardas_ = vardas;}
+    void setPavarde (string pavarde){this->pavarde_ = pavarde;}
+    void setEgzaminas (int egzaminas){this->egzaminas_ = egzaminas;}
+    void setPazymys (int pazymys){nd_.push_back(pazymys);}
+    void setGalutinis (double galutinis){this->galutinis_ = galutinis;}
     void setReiksmes(string vardas, string pavarde, int egzaminas, int galutinis){ // vienas konstruktorius užpildyti visą vektorių:
-        this->vardas = vardas;
-        this->pavarde = pavarde;
-        this->egzaminas = egzaminas;
-        this->galutinis = galutinis;
+        this->vardas_ = vardas;
+        this->pavarde_ = pavarde;
+        this->egzaminas_ = egzaminas;
+        this->galutinis_= galutinis;
     }
 // Geteriai:
-    string getVardas (){return vardas;}
-    string getPavarde (){return pavarde;}
-    int getEgzaminas (){return egzaminas;}
-    vector<int> getPazymiai (){return nd;}
-    int getPazymys (){return nd[0];}
-    int getGalutinis() {return galutinis;}
+    string getVardas (){return vardas_;}
+    string getPavarde (){return pavarde_;}
+    int getEgzaminas (){return egzaminas_;}
+    vector<int> getPazymiai (){return nd_;}
+    int getPazymys (){return nd_[0];}
+    int getGalutinis() {return galutinis_;}
 };
 
 
