@@ -33,7 +33,7 @@ private:
   int galutinis_;
   
 public:
-// Konstruktoriai:
+// Konstruktorius:
     Studentas(): egzaminas_(0){ }
 // Destruktorius:
     ~Studentas() {nd_.clear();}
