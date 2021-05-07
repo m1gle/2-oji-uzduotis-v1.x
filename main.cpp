@@ -1,9 +1,9 @@
 #include "header.h"
 
 int main(){
-int n=100;
+int n=100000;
 vector <Studentas> sarasas,vargsiukai,galvociai;
-for(int i=0;i<5;i++){
+for(int i=0;i<2;i++){
     cout<<n<<" studentu dydzio failas: "<<endl;
     auto start = std::chrono::high_resolution_clock::now(); auto st=start;
     try {
@@ -21,8 +21,6 @@ for(int i=0;i<5;i++){
     std::chrono::duration<double> diff = end-start; // Skirtumas (s)
     cout<<n<<" vector bendrai uztruko: "<<diff.count()<<endl;
     cout<<endl;
-    vargsiukai.clear();
-    galvociai.clear();
     n=n*10;
 }
 return 0;
