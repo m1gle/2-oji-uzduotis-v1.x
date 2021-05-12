@@ -1,4 +1,4 @@
-# [2-oji-užduotis v1.1]
+# [2-oji-užduotis v1.5]
 
 Programa suskaičiuoja studento vidurkį arba medianą.
 
@@ -64,6 +64,10 @@ Su v1.1
 Su v1.2
 - sukurtas vienas seteris visoms reikšmėms perduoti
 - sukurtas konstruktorius ir desturktorius
+
+Su v1.5
+- Sukurtos dvi klasės: bazinė Zmogus klasė bendrai aprašyti žmogų ir iš jos išvestinė (derived) klasė - Studentas
+- Žmogui skirta bazinė klasė yra abstrakčioji klasė, t.y. negalima sukurti žmogaus tipo objektų, o tik objektus gautus iš jos išvestinių klasiu
 
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
