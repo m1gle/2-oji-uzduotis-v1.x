@@ -1,4 +1,4 @@
-# [2-oji-užduotis v1.1]
+# [2-oji-užduotis v1.2]
 
 Programa suskaičiuoja studento vidurkį arba medianą.
 
