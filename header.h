@@ -33,11 +33,7 @@ private:
   int galutinis_;
   
 public:
-// Konstruktorius:
-    Studentas(): egzaminas_(0){ }
-// Destruktorius:
-    ~Studentas() {nd_.clear();}
-
+    Studentas() { setReiksmes("", "", 0, 0); }
 // Seteriai:
     void setVardas(string vardas){this->vardas_ = vardas;}
     void setPavarde (string pavarde){this->pavarde_ = pavarde;}
@@ -57,6 +53,24 @@ public:
     vector<int> getPazymiai (){return nd_;}
     int getPazymys (){return nd_[0];}
     int getGalutinis() {return galutinis_;}
+
+
+//Priskyrimo operatorius
+    Studentas& operatorASSIGN (const Studentas& that) {
+        this->vardas_ = that.vardas_;
+        this->pavarde_ = that.pavarde_;
+        this->egzaminas_ = that.egzaminas_;
+        this->galutinis_ = that.galutinis_;
+        return *this;
+}   
+//Kopijavimo
+    Studentas (const Studentas &sarasas) {
+        vardas_ = sarasas.vardas_; 
+        pavarde_ = sarasas.pavarde_; 
+        egzaminas_ = sarasas.egzaminas_;
+        galutinis_ = sarasas.galutinis_;}
+    
+    ~Studentas() {nd_.clear();}
 };
 
 
