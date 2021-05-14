@@ -40,7 +40,7 @@ public:
     void setEgzaminas (int egzaminas){this->egzaminas_ = egzaminas;}
     void setPazymys (int pazymys){nd_.push_back(pazymys);}
     void setGalutinis (double galutinis){this->galutinis_ = galutinis;}
-    void setReiksmes(string vardas, string pavarde, int egzaminas, int galutinis){
+    void setReiksmes(string vardas, string pavarde, int egzaminas, int galutinis){ // vienas konstruktorius užpildyti visą vektorių:
         this->vardas_ = vardas;
         this->pavarde_ = pavarde;
         this->egzaminas_ = egzaminas;
@@ -60,15 +60,16 @@ public:
         this->vardas_ = that.vardas_;
         this->pavarde_ = that.pavarde_;
         this->egzaminas_ = that.egzaminas_;
+        this->nd_ = that.nd_;
         this->galutinis_ = that.galutinis_;
         return *this;
 }   
 //Kopijavimo
-    Studentas (const Studentas &sarasas) {
-        vardas_ = sarasas.vardas_; 
-        pavarde_ = sarasas.pavarde_; 
-        egzaminas_ = sarasas.egzaminas_;
-        galutinis_ = sarasas.galutinis_;}
+    Studentas (const Studentas &that) {
+        vardas_ = that.vardas_; 
+        pavarde_ = that.pavarde_; 
+        egzaminas_ = that.egzaminas_;
+        galutinis_ = that.galutinis_;}
     
     ~Studentas() {nd_.clear();}
 };
