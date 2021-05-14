@@ -40,7 +40,7 @@ public:
     void setEgzaminas (int egzaminas){this->egzaminas_ = egzaminas;}
     void setPazymys (int pazymys){nd_.push_back(pazymys);}
     void setGalutinis (double galutinis){this->galutinis_ = galutinis;}
-    void setReiksmes(string vardas, string pavarde, int egzaminas, int galutinis){ // vienas konstruktorius užpildyti visą vektorių:
+    void setReiksmes(string vardas, string pavarde, int egzaminas, int galutinis){
         this->vardas_ = vardas;
         this->pavarde_ = pavarde;
         this->egzaminas_ = egzaminas;
