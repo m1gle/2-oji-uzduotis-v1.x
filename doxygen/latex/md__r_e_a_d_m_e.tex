@@ -1,0 +1,142 @@
+Programa suskaičiuoja studento vidurkį arba medianą.
+
+{\bfseries{Programos veikimas\+:}} Su v0.\+1\+:
+\begin{DoxyItemize}
+\item įvesti vardą ir pavardę
+\item įvesti arba sugeneruoti namų darbų pažymius bei egzamino balą
+\item suskaičiuoja suvestų pažymių vidurkį arba mediana
+\end{DoxyItemize}
+
+Su v0.\+2\+:
+\begin{DoxyItemize}
+\item pasirinkti nuskaityti arba įvesti duomenis pačiam
+\item nuskaityti duomenis iš failo
+\item duomenys yra suruošiuojami pagal pavardes
+\item vidurkis ir mediana apvalinami iki sviekosios dalies
+\end{DoxyItemize}
+
+Su v0.\+3
+\begin{DoxyItemize}
+\item funkcijos perkeltos į naują \char`\"{}function.\+cpp\char`\"{} failą
+\item sukurtas išimpčių valdymas, kuris tikrina ar nuskaitomi tesingi pažymiai bei ar skaitomas failas egzistuoja
+\end{DoxyItemize}
+
+Su v0.\+4
+\begin{DoxyItemize}
+\item programa nieko vartotojo nebeklausia
+\item sukuriamas failas
+\item nuskaitomas failas
+\item studentai surušiuojami į dvi grupes pagal galutinį pažymį $<$5\+: \char`\"{}vargsiukai\char`\"{}, $>$=5\+: \char`\"{}galvociai\char`\"{}
+\item skaičiuojamas bendras programos ir kiekvienos funkcijos veikimo laikas bei atspausdinamas
+\end{DoxyItemize}
+
+Su v0.\+5 (Konteinerių testavimas)
+\begin{DoxyItemize}
+\item programa papildomai parašyta naudojant std\+::list ir std\+::deque
+\item testuotjamas nuskaitymo ir rūšiavimo į dvi grupes greitis
+\end{DoxyItemize}
+
+Su v1.\+0 (Rūšiavimo optimizavimas)
+\begin{DoxyItemize}
+\item std\+::vector, std\+::deque ir std\+::list konteineriams rūšiavimo funkcijai pritaikytos dvi strategijos
+\item testuojamas dviejų strategijų nuskaitymo, rūšiavimo į dvi grupes ir bendras programos greitis
+\end{DoxyItemize}
+
+Strategijos\+:
+\begin{DoxyItemize}
+\item 1 strategija\+: Bendro studentai konteinerio (vector, list ir deque tipų) skaidymas (rūšiavimas) į du naujus to paties tipo konteinerius\+: \char`\"{}vargšiukų\char`\"{} ir \char`\"{}kietiakų\char`\"{}. Tokiu būdu tas pats studentas yra dvejuose konteineriuose\+: bendrame studentai ir viename iš suskaidytų (vargšiukai arba kietiakai).
+\item 2 strategija\+: Bendro studentų konteinerio (vector, list ir deque) skaidymas (rūšiavimas) panaudojant tik vieną naują konteinerį\+: \char`\"{}vargšiukai\char`\"{}. Tokiu būdu, jei studentas yra vargšiukas, jį turime įkelti į naująjį \char`\"{}vargšiukų\char`\"{} konteinerį ir ištrinti iš bendro studentai konteinerio. Po šio žingsnio studentai konteineryje liks vien tik kietiakai.
+\end{DoxyItemize}
+
+Pritaikytų strategijų rezultatai\+:  Rezultatas\+: 1 strategijoje greičiau veikia vector, o deque ir list sparta priklauso nuo studentų sarašo dydžio. 2 strategijoje vector ir deque naudojant vector\+::erase ir deque\+::erase programa žymiai lėčiau veikia, nei list, kurioje irgi buvo naudota list\+::erase.
+
+2 strategiją pakeičiau naudojant remove\+\_\+if, kuriuo iš sarašo ištryniau studentus, kurių pažymys $<$5\+: 
+
+Rezultatas\+: std\+::vector pakoreguota 2 strategija ir vietoj vector\+::erase panaudota std\+::remove\+\_\+if bei tai gerokai paspartino rūšiavimo greitį.
+
+Su v1.\+1
+\begin{DoxyItemize}
+\item vietoj vektoriaus struktūros naudojama vectoriaus klasė
+\item palyginimi programos veikimo laikai su ankščiau kurta std\+::vector struktūra
+\item panaudojami optimizavimo flag\textquotesingle{}ai, palyginami rezultatai
+\end{DoxyItemize}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{6}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Versija   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Naudojamas tipas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Flag\textquotesingle{}as   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 100000 studentų failas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 1000000 studentų failas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Failo dydis    }\\\cline{1-6}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Versija   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Naudojamas tipas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Flag\textquotesingle{}as   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 100000 studentų failas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ 1000000 studentų failas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Failo dydis    }\\\cline{1-6}
+\endhead
+v1.\+0   &struktūra   &nėra   &2.\+1747   &20.\+9054   &188KB    \\\cline{1-6}
+v1.\+1   &struktūra   &O1   &2.\+0345   &20.\+0918   &184KB    \\\cline{1-6}
+v1.\+1   &struktūra   &O2   &2.\+1033   &19.\+5852   &184KB    \\\cline{1-6}
+v1.\+1   &struktūra   &O3   &2.\+0104   &19.\+5326   &184KB    \\\cline{1-6}
+v1.\+1   &klasė   &nėra   &2.\+0273   &22.\+1732   &178KB    \\\cline{1-6}
+v1.\+1   &klasė   &O1   &2.\+1664   &21.\+0803   &178KB    \\\cline{1-6}
+v1.\+1   &klasė   &O2   &2.\+2216   &20.\+8976   &178KB    \\\cline{1-6}
+v1.\+1   &klasė   &O3   &2.\+1694   &20.\+8815   &178KB   \\\cline{1-6}
+\end{longtabu}
+
+
+Su v1.\+2
+\begin{DoxyItemize}
+\item sukurtas vienas seteris visoms reikšmėms perduoti
+\item sukurtas konstruktorius ir desturktorius
+\end{DoxyItemize}
+
+Su v1.\+5
+\begin{DoxyItemize}
+\item Sukurtos dvi klasės\+: bazinė \mbox{\hyperlink{class_zmogus}{Zmogus}} klasė bendrai aprašyti žmogų ir iš jos išvestinė (derived) klasė -\/ \mbox{\hyperlink{class_studentas}{Studentas}}
+\item Žmogui skirta bazinė klasė yra abstrakčioji klasė, t.\+y. negalima sukurti žmogaus tipo objektų, o tik objektus gautus iš jos išvestinių klasiu
+\end{DoxyItemize}
+
+Sy v2.\+0
+\begin{DoxyItemize}
+\item Sukurta dokumentacija panaudojant Doxygen
+\item Atlikti Unit testai
+\item Sukurtas automatinis įdiegimo failas
+\end{DoxyItemize}
+
+{\bfseries{Išimčių valdymas\+:}}\textbackslash{} Jeigu neranda skaitymo failo gaunama žinutė\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Nerastas failas!}
+
+\end{DoxyCode}
+ Blogas pažymio ir egzamino įvedimas faile išmeta\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Netinkamas namu darbu pazymis skaitymo failel! Pazymis turi buti >=0 \&\& <=10!}
+\DoxyCodeLine{Netinkamas egzamino pazymis skaitymo failel! Pazymis turi buti >=0 \&\& <=10!}
+
+\end{DoxyCode}
+ Programos sukurtos naudojant std\+::vector (\char`\"{}vector\char`\"{}), std\+::list (\char`\"{}list\char`\"{}), std\+::deque (\char`\"{}deque\char`\"{}).
+
+{\bfseries{Įdiegimo instrukcija\+:}}\textbackslash{} Atsisiųsti \+\_\+release ir jį išarchivuoti. Terminale nuėjus į išarchivuotą aplanką atlikti\+:
+\begin{DoxyItemize}
+\item Kompiliavimui atitinkamai naudoti make vector/deque/list komandą\+:\textbackslash{}
+\item .o failo ištrinimui naudoti make clean komandą.
+\item Paleisti ./\mbox{[}pavadinimas\mbox{]}\textbackslash{} Makefile\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{clean:}
+\DoxyCodeLine{    rm *.o}
+\DoxyCodeLine{vector: }
+\DoxyCodeLine{    g++ -\/c function.cpp \&\& g++ -\/o vector vector.cpp function.o}
+\DoxyCodeLine{list: }
+\DoxyCodeLine{    g++ -\/c function.cpp \&\& g++ -\/o list list.cpp function.o}
+\DoxyCodeLine{deque: }
+\DoxyCodeLine{    g++ -\/c function.cpp \&\& g++ -\/o deque deque.cpp function.o}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}
+
+Testavimo sistemos parametrai\+:
+\begin{DoxyItemize}
+\item CPU\+: Intel i5 8250U (4 cores, 8 threads)
+\item RAM\+: 12GB DDR4
+\item SSD\+: Hynix 256GB SATA 3.\+0 (OS)
+\item SSD\+: Crucial 1TB SATA 3.\+0 
+\end{DoxyItemize}
