@@ -71,7 +71,7 @@ Su v1.5
 - Žmogui skirta bazinė klasė yra abstrakčioji klasė, t.y. negalima sukurti žmogaus tipo objektų, o tik objektus gautus iš jos išvestinių klasiu
 
 Sy v2.0
-- Sukurta dokumentacija panaudojant Doxygen
+- Sukurta dokumentacija panaudojant Doxygen, norint pamatyti dokumentaciją, reikia atsidaryti index.html failą, kuris yra /doxygen/html/ aplankale.
 - Atlikti Unit testai
 - Sukurtas automatinis įdiegimo failas
 
