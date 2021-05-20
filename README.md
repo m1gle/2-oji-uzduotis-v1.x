@@ -43,12 +43,12 @@ Rezultatas: 1 strategijoje greičiau veikia vector, o deque ir list sparta prikl
 
 2 strategiją pakeičiau naudojant remove_if, kuriuo iš sarašo ištryniau studentus, kurių pažymys <5:
 ![alt text](https://i.imgur.com/OY0tpCu.png)
-| 1000 failų |
-| Naudojamas tipas | Flag'as | 100000 studentų failas | 1000000 studentų failas | Failo dydis |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| struktūra | nėra | 2.1747 | 20.9054 | 188KB |
-| struktūra | O1 | 2.0345 | 20.0918 | 184KB |
-| struktūra| O2 | 2.1033 | 19.5852 | 184KB |
+
+| Naudojamas tipas | 1000 skaitymas | 1000 rūšiavimas | 1000 bendrai | 10000 skaitymas | 10000 rūšiavimas | 10000 bendrai | 100000 skaitymas | 100000 rūšiavimas | 100000 bendrai |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| vector | 0.00798 | 0.06795 | 0.09238 | 0.09195 | 6.25084 | 6.45164 | 0.79895 | 659.071 | 660.93 |
+| deque | 0.01004 | 0.02893 | 0.05773 | 0.08506 | 2.68303 | 2.92414 | 0.81193 | 293.035 | 295.179 |
+| list | 0.02648 | 0 | 0.04631 | 0.09533 | 0.00498 | 0.24635 | 0.85893 | 0.05593 | 2.71802 |
 
 Rezultatas: std::vector pakoreguota 2 strategija ir vietoj vector::erase panaudota std::remove_if bei tai gerokai paspartino rūšiavimo greitį.
 
