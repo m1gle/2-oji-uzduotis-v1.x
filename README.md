@@ -39,11 +39,14 @@ Strategijos:
 
 Pritaikytų strategijų rezultatai:
 ![alt text](https://i.imgur.com/Hc91QcR.png)
+| Tipas | 1000 Skaitymas | 1000 Rūšiavimas | 1000 Bendrai  | 10000 Skaitymas | 10000 Rūšiavimas | 10000 Bendrai  | 100000 Skaitymas | 100000 Rūšiavimas | 100000 Bendrai |
+|--------|-----------|------------|----------|-----------|------------|----------|-----------|------------|---------|
+| Vector | 0.007975  | 0.067948   | 0.092375 | 0.091948  | 6.25084    | 6.46164  | 0.798945  | 659.071    | 660.93  |
+| Deque  | 0.010042  | 0.02893    | 0.057732 | 0.085061  | 2.68303    | 2.92414  | 0.811928  | 293.035    | 295.179 |
+| List   | 0.02642   | 0          | 0.046306 | 0.095331  | 0.004984   | 0.246347 | 0.858934  | 0.055927   | 2.71802 |
 Rezultatas: 1 strategijoje greičiau veikia vector, o deque ir list sparta priklauso nuo studentų sarašo dydžio. 2 strategijoje vector ir deque naudojant vector::erase ir deque::erase programa žymiai lėčiau veikia, nei list, kurioje irgi buvo naudota list::erase.
 
 2 strategiją pakeičiau naudojant remove_if, kuriuo iš sarašo ištryniau studentus, kurių pažymys <5:
-![alt text](https://i.imgur.com/OY0tpCu.png)
-
 | Tipas | 1000 Skaitymas | 1000 Rūšiavimas | 1000 Bendrai | 10000 Skaitymas | 10000 Rūšiavimas | 10000 Bendrai  | 100000 Skaitymas | 100000 Rūšiavimas | 100000 Bendrai | 1000000 Skaitymas | 1000000 Rūšiavimas | 1000000 Bendrai | 10000000 Skaitymas | 10000000 Rūšiavimas | 10000000 Bendrai |
 |--------|-----------|------------|---------|-----------|------------|----------|-----------|------------|---------|-----------|------------|---------|-----------|------------|---------|
 | Vector | 0.00999   | 0.000997   | 0.01763 | 0.084436  | 0.006992   | 0.131163 | 0.795588  | 0.069971   | 1.22628 | 7.97509   | 0.635962   | 12.0685 | 81.456    | 6.3146     | 164.268 |
