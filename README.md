@@ -44,6 +44,7 @@ Pritaikytų strategijų rezultatai:
 | Vector | 0.007975  | 0.067948   | 0.092375 | 0.091948  | 6.25084    | 6.46164  | 0.798945  | 659.071    | 660.93  |
 | Deque  | 0.010042  | 0.02893    | 0.057732 | 0.085061  | 2.68303    | 2.92414  | 0.811928  | 293.035    | 295.179 |
 | List   | 0.02642   | 0          | 0.046306 | 0.095331  | 0.004984   | 0.246347 | 0.858934  | 0.055927   | 2.71802 |
+
 Rezultatas: 1 strategijoje greičiau veikia vector, o deque ir list sparta priklauso nuo studentų sarašo dydžio. 2 strategijoje vector ir deque naudojant vector::erase ir deque::erase programa žymiai lėčiau veikia, nei list, kurioje irgi buvo naudota list::erase.
 
 2 strategiją pakeičiau naudojant remove_if, kuriuo iš sarašo ištryniau studentus, kurių pažymys <5:
