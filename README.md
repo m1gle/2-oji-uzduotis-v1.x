@@ -38,7 +38,6 @@ Strategijos:
 - 2 strategija: Bendro studentų konteinerio (vector, list ir deque) skaidymas (rūšiavimas) panaudojant tik vieną naują konteinerį: "vargšiukai". Tokiu būdu, jei studentas yra vargšiukas, jį turime įkelti į naująjį "vargšiukų" konteinerį ir ištrinti iš bendro studentai konteinerio. Po šio žingsnio studentai konteineryje liks vien tik kietiakai. 
 
 Pritaikytų strategijų rezultatai:
-![alt text](https://i.imgur.com/Hc91QcR.png)
 1 Strategija:
 | Tipas | 1000 Skaitymas | 1000 Rūšiavimas | 1000 Bendrai  | 10000 Skaitymas | 10000 Rūšiavimas | 10000 Bendrai  | 100000 Skaitymas | 100000 Rūšiavimas | 100000 Bendrai | 1000000 Skaitymas | 1000000 Rūšiavimas | 1000000 Bendrai | 10000000 Skaitymas | 10000000 Rūšiavimas | 10000000 Bendrai  |
 |--------|-----------|------------|----------|-----------|------------|----------|-----------|------------|---------|-----------|------------|---------|-----------|------------|----------|
