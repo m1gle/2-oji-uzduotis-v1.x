@@ -1,4 +1,4 @@
-# [2-oji-užduotis v1.5]
+# [2-oji-užduotis v2.0]
 
 Programa suskaičiuoja studento vidurkį arba medianą.
 
@@ -69,6 +69,11 @@ Su v1.2
 Su v1.5
 - Sukurtos dvi klasės: bazinė Zmogus klasė bendrai aprašyti žmogų ir iš jos išvestinė (derived) klasė - Studentas
 - Žmogui skirta bazinė klasė yra abstrakčioji klasė, t.y. negalima sukurti žmogaus tipo objektų, o tik objektus gautus iš jos išvestinių klasiu
+
+Sy v2.0
+- Sukurta dokumentacija panaudojant Doxygen
+- Atlikti Unit testai
+- Sukurtas automatinis įdiegimo failas
 
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
