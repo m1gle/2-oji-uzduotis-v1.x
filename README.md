@@ -43,6 +43,13 @@ Rezultatas: 1 strategijoje greičiau veikia vector, o deque ir list sparta prikl
 
 2 strategiją pakeičiau naudojant remove_if, kuriuo iš sarašo ištryniau studentus, kurių pažymys <5:
 ![alt text](https://i.imgur.com/OY0tpCu.png)
+| 1000 failų |
+| Naudojamas tipas | Flag'as | 100000 studentų failas | 1000000 studentų failas | Failo dydis |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| struktūra | nėra | 2.1747 | 20.9054 | 188KB |
+| struktūra | O1 | 2.0345 | 20.0918 | 184KB |
+| struktūra| O2 | 2.1033 | 19.5852 | 184KB |
+
 Rezultatas: std::vector pakoreguota 2 strategija ir vietoj vector::erase panaudota std::remove_if bei tai gerokai paspartino rūšiavimo greitį.
 
 Su v1.1
