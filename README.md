@@ -90,6 +90,37 @@ Sy v2.0
 - Atlikti Unit testai
 - Sukurtas automatinis įdiegimo failas
 
+Su Unit Test : Catch atliekami testai:
+```
+TEST_CASE("Studentas class tikrinimas") {
+
+  SECTION("Studentas::vardas") {
+    Studentas student;
+    student.setVardas("Testas");
+    REQUIRE(student.getVardas() == "Testas");
+  }
+
+  SECTION("Studentas::pavarde") {
+    Studentas student;
+    student.setPavarde("Testerauskas");
+    REQUIRE(student.getPavarde() == "Testerauskas");
+  }
+
+    SECTION("Studentas::egzaminas") {
+    Studentas student;
+    student.setEgzaminas(5);
+    REQUIRE(student.getEgzaminas() == 5);
+  }
+
+    SECTION("Studentas::galutinis") {
+    Studentas student;
+    student.setGalutinis(10);
+    REQUIRE(student.getGalutinis() == 10);
+  }
+  
+}
+```
+
 **Išimčių valdymas:**\
 Jeigu neranda skaitymo failo gaunama žinutė:
 ```
